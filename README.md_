@@ -1,0 +1,110 @@
+# 🚀 Criador de Roteiros para Vídeos Curtos com IA Gemini 🤖
+
+## 🌟 Sobre o Projeto
+
+Este projeto é um sistema multi-agente desenvolvido em Python que utiliza a API Google Gemini e o Google Agent Development Kit (ADK) para gerar ideias de temas, ângulos criativos e roteiros completos para vídeos curtos (estilo TikTok, Reels, Shorts).
+
+O objetivo é auxiliar criadores de conteúdo a superar o bloqueio criativo e acelerar o processo de produção, fornecendo roteiros estruturados e otimizados para engajamento.
+
+Este projeto foi desenvolvido como parte da Imersão IA da Alura em parceria com o Google.
+
+## ✨ Funcionalidades
+
+O sistema é composto por uma cadeia de 4 agentes especializados:
+
+1.  **Agente Pesquisador de Temas em Alta:**
+    *   Recebe um **nicho** informado pelo usuário.
+    *   Utiliza o Google Search para encontrar tópicos textuais recentes e relevantes no nicho.
+    *   Resume de 3 a 5 temas promissores com justificativas.
+
+2.  **Agente Gerador de Ângulos Criativos:**
+    *   Recebe o **tema escolhido** pelo usuário (saída do Agente 1).
+    *   Sugere 3 ângulos ou formatos de vídeo distintos e criativos para abordar o tema.
+
+3.  **Agente Roteirista Expresso:**
+    *   Recebe o **tema e o ângulo escolhidos** pelo usuário.
+    *   Cria um roteiro conciso e dinâmico estruturado em:
+        *   Gancho (3-5 segundos)
+        *   Desenvolvimento textual e fluido (15-25 segundos)
+        *   Chamada para Ação (CTA) (3-5 segundos)
+    *   Sugere um texto para a legenda principal do vídeo (sem hashtags).
+
+4.  **Agente de Refinamento e Finalização:**
+    *   Recebe o roteiro bruto e a legenda do Agente 3.
+    *   Revisa e pole o roteiro, garantindo clareza, concisão e fluxo.
+    *   Refina a legenda para ser mais cativante.
+    *   Sugere de 4 a 6 hashtags estratégicas (utilizando Google Search para relevância).
+    *   (Bônus) Pode sugerir elementos visuais/sonoros simples.
+
+## 🛠️ Tecnologias Utilizadas
+
+*   **Python 3**
+*   **Google Gemini API** (especificamente o modelo `gemini-1.5-flash-latest` ou similar, conforme configurado no notebook)
+*   **Google Agent Development Kit (ADK)**
+*   **Google Colaboratory (Colab)** para desenvolvimento e execução.
+
+## ⚙️ Como Executar o Projeto (no Google Colab)
+
+1.  **Pré-requisitos:**
+    *   Uma conta Google.
+    *   Acesso ao Google Colab.
+    *   Uma Chave de API do Google Gemini.
+        *   Você pode obter uma chave em [Google AI Studio](https://aistudio.google.com/app/apikey).
+
+2.  **Configuração da API Key:**
+    *   Abra o notebook no Google Colab.
+    *   No painel esquerdo, clique no ícone de chave (🔑 Secrets).
+    *   Adicione um novo secret chamado `GOOGLE_API_KEY` e cole sua chave de API como valor. Certifique-se de que a opção "Notebook access" está habilitada para este secret.
+
+3.  **Execução das Células:**
+    *   Execute as células do notebook em ordem:
+        *   Célula de instalação de bibliotecas (`%pip -q install google-genai google-adk`).
+        *   Célula de importações e configuração da API Key.
+        *   Células de definição das funções auxiliares (`call_agent`, `to_markdown`).
+        *   Células de definição de cada um dos 4 agentes.
+        *   A célula principal de execução do sistema de agentes (a última célula que interage com o usuário).
+
+4.  **Interação:**
+    *   O script solicitará que você digite um **nicho** para iniciar.
+    *   Em seguida, você será solicitado a escolher um **tema** da lista gerada pelo Agente 1.
+    *   Depois, escolherá um **ângulo** da lista gerada pelo Agente 2.
+    *   Ao final, o roteiro completo e finalizado pelo Agente 4 será exibido.
+
+## 🚀 Exemplo de Uso (Tema: GTA 6)
+
+```text
+🚀 Bem-vindo ao Criador de Roteiros para Vídeos Curtos! 🚀
+Vamos começar encontrando alguns temas quentes para você.
+❓ Por favor, digite o NICHO sobre o qual você quer criar vídeos (ex: culinária vegana, dicas de produtividade, games): jogos de video game
+...
+Você escolheu o tema: '**"GTA 6'
+...
+Você escolheu o ângulo: '"GTA 6: Vazamentos REAIS vs FAKE NEWS (Guia Rápido)"'
+...
+🎉 Processo concluído! Seu roteiro está pronto! 🎉
+--------------------------------------------------------------
+
+ROTEIRO FINALIZADO E OTIMIZADO:
+Gancho (3-5s):
+GTA 6 VAZOU? 🚨 Calma! Descubra AGORA o que é #REAL e fuja das #FakeNews!
+Desenvolvimento (15-25s):
+✅ REAIS: Gameplay vazada, 2 protagonistas (homem e mulher), Vice City turbinada!
+❌ FAKE: Mapa gigante, história maluca e data DEFINITIVA? Esquece, é cilada!
+🕵️ FONTE SEGURA: Canais confiáveis, SEM clickbait! Quer saber TUDO? Segue aqui!
+CTA (3-5s):
+Gostou do guia? 🔥 SALVA pra não cair em golpe e COMENTA: o que MAIS te anima no GTA 6?
+LEGENDA FINAL E ENGAJADORA:
+GTA 6: A verdade NUA E CRUA sobre os vazamentos! 🕵️‍♂️ O que você espera do jogo? Comenta aí embaixo! 👇
+HASHTAGS ESTRATÉGICAS:
+#GTA6 #GTA6Leaks #GTAVI #GrandTheftAuto #GamingNews #Gamer
+SUGESTÕES VISUAIS/SONORAS (BÔNUS):
+Visual: Usar cortes rápidos mostrando prints dos vazamentos reais vs. imagens com "FAKE NEWS" bem grande sobrepostas em notícias falsas.
+Som: Música eletrônica/tecno com batida crescente e um "glitch" sonoro nas partes das fake news.
+🤝 Contribuições
+Feedback e sugestões são bem-vindos! Sinta-se à vontade para abrir uma Issue neste repositório.
+📄 Licença
+Este projeto foi desenvolvido para fins educacionais como parte da Imersão IA Alura + Google.
+🙏 Agradecimentos
+À Alura e ao Google pela iniciativa da Imersão IA.
+Às tecnologias Gemini e ADK por possibilitarem este desenvolvimento.
+Desenvolvido por: Wesley De Toledo Magari
