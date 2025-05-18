@@ -1,85 +1,78 @@
-# 🚀 Criador de Roteiros para Vídeos Curtos com IA Gemini 🤖
+ 🚀 Roteiro Mágico: TikTok e Reels com IA Gemini! 🎬✨
 
-## 🌟 Sobre o Projeto
+Cansado do bloqueio criativo? Quer transformar suas ideias em vídeos virais num piscar de olhos? ⚡
+O **Roteiro Mágico** é seu novo assistente pessoal de criação, turbinado com a Inteligência Artificial do Google!
 
-Este projeto é um sistema multi-agente desenvolvido em Python que utiliza a API Google Gemini e o Google Agent Development Kit (ADK) para gerar ideias de temas, ângulos criativos e roteiros completos para vídeos curtos (estilo TikTok, Reels, Shorts).
+Desenvolvido com paixão durante a Imersão IA Alura + Google, este sistema inteligente é a sua arma secreta para:
+   🌟 Descobrir **temas que estão bombando** no seu nicho!
+   💡 Gerar **ângulos criativos e originais** para seus vídeos se destacarem!
+   ✍️ Receber **roteiros completos e dinâmicos** em segundos, prontos para você gravar e brilhar!
 
-O objetivo é auxiliar criadores de conteúdo a superar o bloqueio criativo e acelerar o processo de produção, fornecendo roteiros estruturados e otimizados para engajamento.
+Diga adeus às horas de agonia na frente da tela em branco e olá para uma avalanche de conteúdo incrível e mais tempo para fazer o que você ama: criar!
 
-Este projeto foi desenvolvido como parte da Imersão IA da Alura em parceria com o Google.
+---
 
-## ✨ Funcionalidades
+ 🤔 Como a Mágica Acontece?
 
-O sistema é composto por uma cadeia de 4 agentes especializados:
+Nosso sistema é uma verdadeira equipe de elite com 4 agentes de IA super especializados, trabalhando em sintonia para você:
 
-1.  **Agente Pesquisador de Temas em Alta:**
-    *   Recebe um **nicho** informado pelo usuário.
-    *   Utiliza o Google Search para encontrar tópicos textuais recentes e relevantes no nicho.
-    *   Resume de 3 a 5 temas promissores com justificativas.
+1.  🕵️ O Detetive de Tendências:**
+    Ele investiga o Google para encontrar os tópicos mais quentes e relevantes do seu nicho, entregando de 3 a 5 temas quentíssimos com o potencial de viralizar!
 
-2.  **Agente Gerador de Ângulos Criativos:**
-    *   Recebe o **tema escolhido** pelo usuário (saída do Agente 1).
-    *   Sugere 3 ângulos ou formatos de vídeo distintos e criativos para abordar o tema.
+2.  🎨 O Mestre dos Ângulos:**
+    Com o tema escolhido, ele solta a criatividade e te dá 3 opções de ângulos e formatos de vídeo únicos para você surpreender sua audiência.
 
-3.  **Agente Roteirista Expresso:**
-    *   Recebe o **tema e o ângulo escolhidos** pelo usuário.
-    *   Cria um roteiro conciso e dinâmico estruturado em:
-        *   Gancho (3-5 segundos)
-        *   Desenvolvimento textual e fluido (15-25 segundos)
-        *   Chamada para Ação (CTA) (3-5 segundos)
-    *   Sugere um texto para a legenda principal do vídeo (sem hashtags).
+3.  ✍️ O Roteirista Expresso:**
+    Mão na massa! Ele transforma seu tema e ângulo em um roteiro completo, com a estrutura perfeita para vídeos curtos: Gancho explosivo, Desenvolvimento envolvente e um CTA para engajar! E de quebra, uma sugestão de legenda.
 
-4.  **Agente de Refinamento e Finalização:**
-    *   Recebe o roteiro bruto e a legenda do Agente 3.
-    *   Revisa e pole o roteiro, garantindo clareza, concisão e fluxo.
-    *   Refina a legenda para ser mais cativante.
-    *   Sugere de 4 a 6 hashtags estratégicas (utilizando Google Search para relevância).
-    *   (Bônus) Pode sugerir elementos visuais/sonoros simples.
+4.  ✨ O Polidor Final:**
+    Ele pega o trabalho do Roteirista Expresso e dá aquele brilho final: revisa o texto, turbina a legenda, pesquisa e sugere as melhores hashtags, e pode até dar dicas de visuais e sons para seu vídeo ficar impecável!
 
-## 🛠️ Tecnologias Utilizadas
+---
 
-*   **Python 3**
-*   **Google Gemini API** (especificamente o modelo `gemini-1.5-flash-latest` ou similar, conforme configurado no notebook)
-*   **Google Agent Development Kit (ADK)**
-*   **Google Colaboratory (Colab)** para desenvolvimento e execução.
+ 🛠️ Os Ingredientes da Nossa Poção Mágica
 
-## ⚙️ Como Executar o Projeto (no Google Colab)
+*   Linguagem de Programação: Python 3
+*   Inteligência Artificial: API Google Gemini (modelo `gemini-1.5-flash-latest` ou similar)
+*   Estrutura de Agentes: Google Agent Development Kit (ADK)
+*   Ambiente de Criação: Google Colaboratory (Colab)
 
-1.  **Pré-requisitos:**
-    *   Uma conta Google.
-    *   Acesso ao Google Colab.
-    *   Uma Chave de API do Google Gemini.
-        *   Você pode obter uma chave em [Google AI Studio](https://aistudio.google.com/app/apikey).
+---
 
-2.  **Configuração da API Key:**
-    *   Abra o notebook no Google Colab.
-    *   No painel esquerdo, clique no ícone de chave (🔑 Secrets).
-    *   Adicione um novo secret chamado `GOOGLE_API_KEY` e cole sua chave de API como valor. Certifique-se de que a opção "Notebook access" está habilitada para este secret.
+ ⚙️ Como Usar o Roteiro Mágico (Simples Assim!)
 
-3.  **Execução das Células:**
-    *   Execute as células do notebook em ordem:
-        *   Célula de instalação de bibliotecas (`%pip -q install google-genai google-adk`).
-        *   Célula de importações e configuração da API Key.
-        *   Células de definição das funções auxiliares (`call_agent`, `to_markdown`).
-        *   Células de definição de cada um dos 4 agentes.
-        *   A célula principal de execução do sistema de agentes (a última célula que interage com o usuário).
+Você vai rodar tudo no Google Colab. Veja como:
 
-4.  **Interação:**
-    *   O script solicitará que você digite um **nicho** para iniciar.
-    *   Em seguida, você será solicitado a escolher um **tema** da lista gerada pelo Agente 1.
-    *   Depois, escolherá um **ângulo** da lista gerada pelo Agente 2.
-    *   Ao final, o roteiro completo e finalizado pelo Agente 4 será exibido.
+1.  O Que Você Precisa Ter:**
+       Uma conta Google.
+       Acesso ao Google Colab.
+       Sua Chave de API do Google Gemini (você pega rapidinho no [Google AI Studio](https://aistudio.google.com/app/apikey)).
 
-## 🚀 Exemplo de Uso (Tema: GTA 6)
+2.  Guardando o Segredo da API Key:**
+       No seu notebook do Colab, vá no painel esquerdo, clique no ícone de chave (🔑 Secrets).
+       Crie um novo "secret" com o nome `GOOGLE_API_KEY` e cole sua chave lá. Marque a opção "Notebook access".
+
+3.  Ligando a Magia (Executando as Células):**
+       Abra o notebook e execute as células na ordem em que aparecem. Simples assim!
+           Instalação das bibliotecas.
+           Configuração da API Key e importações.
+           Funções auxiliares e as definições de cada um dos nossos 4 agentes.
+           Por último, a célula principal que faz tudo acontecer e interage com você.
+
+4.  Seu Momento de Criar:**
+       O sistema vai te pedir para digitar um **nicho**.
+       Depois, você escolhe um **tema** da lista que ele gerar.
+       Em seguida, seleciona um **ângulo** criativo.
+       E *POW!* 💥 Seu roteiro completo e finalizado surge na tela!
+
+---
+
+ 🚀 Espia Só um Exemplo da Mágica (Tema: GTA 6)
+
+Imagine que você pediu ajuda para o nicho "jogos de video game", e o Roteiro Mágico te guiou até o tema "GTA 6" com o ângulo "Vazamentos REAIS vs FAKE NEWS". Olha só o que ele prepararia para você:
 
 ```text
 🚀 Bem-vindo ao Criador de Roteiros para Vídeos Curtos! 🚀
-Vamos começar encontrando alguns temas quentes para você.
-❓ Por favor, digite o NICHO sobre o qual você quer criar vídeos (ex: culinária vegana, dicas de produtividade, games): jogos de video game
-...
-Você escolheu o tema: '**"GTA 6'
-...
-Você escolheu o ângulo: '"GTA 6: Vazamentos REAIS vs FAKE NEWS (Guia Rápido)"'
 ...
 🎉 Processo concluído! Seu roteiro está pronto! 🎉
 --------------------------------------------------------------
@@ -100,11 +93,17 @@ HASHTAGS ESTRATÉGICAS:
 SUGESTÕES VISUAIS/SONORAS (BÔNUS):
 Visual: Usar cortes rápidos mostrando prints dos vazamentos reais vs. imagens com "FAKE NEWS" bem grande sobrepostas em notícias falsas.
 Som: Música eletrônica/tecno com batida crescente e um "glitch" sonoro nas partes das fake news.
-🤝 Contribuições
-Feedback e sugestões são bem-vindos! Sinta-se à vontade para abrir uma Issue neste repositório.
+🤔 Por que o Roteiro Mágico vai ser seu novo melhor amigo?
+⚡ Velocidade da Luz: Ideias e roteiros prontos em minutos, não em horas de sofrimento!
+💡 Adeus, Bloqueio Criativo: Uma fonte infinita de inspiração e ângulos inovadores ao seu alcance.
+🎯 Conteúdo que Conecta: Roteiros pensados estrategicamente para prender a atenção e gerar engajamento.
+🧘 Mais Tempo para o que Importa: Foque em gravar, editar e interagir com sua audiência. Deixe a ideação com a gente!
+🤝 Vamos Conversar?
+Adoraria ouvir seu feedback e sugestões! Se tiver ideias ou (espero que não!) encontrar algum contratempo, abra uma Issue neste repositório. Vamos construir juntos!
 📄 Licença
-Este projeto foi desenvolvido para fins educacionais como parte da Imersão IA Alura + Google.
-🙏 Agradecimentos
-À Alura e ao Google pela iniciativa da Imersão IA.
-Às tecnologias Gemini e ADK por possibilitarem este desenvolvimento.
-Desenvolvido por: Wesley De Toledo Magari
+Este projeto nasceu da paixão pelo aprendizado e foi desenvolvido para fins educacionais durante a Imersão IA Alura + Google.
+🙏 Um Salve Especial!
+À Alura e ao Google por esta jornada incrível na Imersão IA!
+Às tecnologias Gemini e ADK que são a base desta mágica.
+
+Criado com 🧠 e ❤️ por: Wesley De Toledo Magari
